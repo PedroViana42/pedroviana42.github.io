@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { Activity, Server } from 'lucide-react';
 
+const TAGLINES = [
+    "Architecting practical intelligence.",
+    "Building scalable AI infrastructure.",
+    "Engineering data-driven solutions.",
+    "Designing robust system architectures."
+];
+
 const Hero = () => {
-    const [text, setText] = useState('');
-    const fullText = "Architecting practical intelligence.";
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        let i = 0;
         const timer = setInterval(() => {
-            setText(fullText.slice(0, i));
-            i++;
-            if (i > fullText.length) clearInterval(timer);
-        }, 50);
+            setIndex((prev) => (prev + 1) % TAGLINES.length);
+        }, 5000);
         return () => clearInterval(timer);
     }, []);
 
@@ -38,10 +41,19 @@ const Hero = () => {
                         <span className="text-blue-500 italic font-serif">AUGUSTO</span>
                     </h1>
 
-                    <div className="h-12">
-                        <p className="text-xl md:text-2xl font-mono text-white/60 max-w-2xl">
-                            {text}<span className="animate-pulse">_</span>
-                        </p>
+                    <div className="h-12 overflow-hidden relative">
+                        <AnimatePresence mode="wait">
+                            <motion.p
+                                key={index}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                className="text-xl md:text-2xl font-mono text-white/60 max-w-2xl absolute"
+                            >
+                                {TAGLINES[index]}<span className="animate-pulse text-blue-500">_</span>
+                            </motion.p>
+                        </AnimatePresence>
                     </div>
 
                     <div className="mt-12 flex flex-wrap gap-4">
