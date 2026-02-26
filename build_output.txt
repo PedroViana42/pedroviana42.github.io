@@ -1,0 +1,30 @@
+﻿
+> react-example@0.0.0 build
+> vite build
+
+node.exe : 'vite' não 
+é reconhecido como um 
+comando interno
+No linha:1 caractere:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ('vite' não é    
+ re...comando inter    
+no:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+ou externo, um 
+programa operável ou 
+um arquivo em lotes.
