@@ -13,6 +13,16 @@ import { Project } from '../types';
 
 export const PROJECTS: Project[] = [
     {
+        id: '1',
+        title: 'Subsolo',
+        description: 'An anonymous university social network for confessions, gossip, and public utility. Features temporal identities (48h nicks) to preserve long-term privacy.',
+        tags: ['React 19', 'Express', 'PostgreSQL', 'Prisma', 'Docker'],
+        category: 'Web',
+        metrics: [{ label: 'Auth', value: 'JWT' }, { label: 'Sync', value: 'Nick Rotation' }],
+        githubUrl: 'https://github.com/PedroViana42/Subsolo',
+        liveUrl: 'https://subsolo.usenexora.online/'
+    },
+    {
         id: '2',
         title: 'Northwind ETL Data Pipeline',
         description: 'An end-to-end data engineering pipeline using Apache Airflow to orchestrate sales data from PostgreSQL to Snowflake with Pandas transformations.',

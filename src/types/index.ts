@@ -6,4 +6,5 @@ export interface Project {
     category: 'Web' | 'Data' | 'AI' | 'DevOps';
     metrics?: { label: string; value: string }[];
     githubUrl?: string;
+    liveUrl?: string;
 }
