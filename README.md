@@ -78,7 +78,7 @@ The project is configured to deploy automatically to **GitHub Pages** via GitHub
 
 1. Push your changes to the `main` branch.
 2. Ensure **GitHub Actions** is selected as the deployment source in the repository settings (`Settings > Pages > Build and deployment > Source`).
-3. View the live site at [pedroviana42.github.io](https://pedroviana42.github.io/).
+3. View the live site at [pedroviana.usenexora.online](https://pedroviana.usenexora.online/).
 
 ---
 Developed by **Pedro Augusto**
