@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const PHILOSOPHIES = [
     {
-        title: 'Philosophy',
-        quote: "I focus on building practical, end-to-end solutions rather than just talking about hardware. I love getting my hands dirty and turning innovative ideas into reality."
+        title: 'Architectural Vision',
+        quote: "Data infrastructure is the backbone of modern intelligence. I focus on designing high-availability systems that prioritize fault tolerance, scalability, and deterministic performance."
     },
     {
-        title: 'The Mindset',
-        quote: "Code is just a tool; the real goal is solving the puzzle. Whether I'm architecting a complex data pipeline or crafting a smooth web interface, I look for the most creative and efficient path to connect the dots."
+        title: 'Business Impact',
+        quote: "Engineering is not just about writing code; it's about solving organizational challenges. I leverage my Computer Science background to build systems that deliver measurable business value and operational excellence."
     },
     {
-        title: 'The Standard',
-        quote: "Great software is built on transparency, security, and good architecture. I take pride in creating well-structured, responsible solutions that are as robust behind the scenes as they are clean on the surface."
+        title: 'Engineering Standard',
+        quote: "Resilience is non-negotiable. I implement secure-by-default architectures and robust ETL pipelines that ensure data integrity and system stability under high-concurrency loads."
     }
 ];
 

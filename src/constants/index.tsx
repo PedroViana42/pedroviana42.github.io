@@ -15,38 +15,51 @@ export const PROJECTS: Project[] = [
     {
         id: '1',
         title: 'Subsolo',
-        description: 'An anonymous university social network for confessions, gossip, and public utility. Features temporal identities (48h nicks) to preserve long-term privacy.',
+        description: 'Anonymous university network with 48h temporal identities. Engineered for high-performance with sub-100ms query latency and irreversible hashing to ensure data privacy and structural anonymity.',
         tags: ['React 19', 'Express', 'PostgreSQL', 'Prisma', 'Docker'],
         category: 'Web',
-        metrics: [{ label: 'Auth', value: 'JWT' }, { label: 'Sync', value: 'Nick Rotation' }],
+        metrics: [
+            { label: 'Latency', value: '<100ms' },
+            { label: 'Privacy', value: 'Irreversible Hashing' },
+            { label: 'Architecture', value: 'Temporal Identity' }
+        ],
         githubUrl: 'https://github.com/PedroViana42/Subsolo',
         liveUrl: 'https://subsolo.usenexora.online/'
     },
     {
         id: '2',
         title: 'Northwind ETL Data Pipeline',
-        description: 'An end-to-end data engineering pipeline using Apache Airflow to orchestrate sales data from PostgreSQL to Snowflake with Pandas transformations.',
-        tags: ['Airflow', 'Snowflake', 'Python', 'PostgreSQL'],
+        description: 'End-to-end data engineering pipeline focused on Data Quality and Governance. Orchestrates high-volume sales data from PostgreSQL to Snowflake with robust validation and schema enforcement.',
+        tags: ['Airflow', 'Snowflake', 'Python', 'Pandas'],
         category: 'Data',
-        metrics: [{ label: 'Orchestration', value: 'Airflow' }, { label: 'Storage', value: 'Snowflake' }],
+        metrics: [
+            { label: 'Governance', value: 'Data Quality' },
+            { label: 'Pipeline', value: 'Automated ETL' }
+        ],
         githubUrl: 'https://github.com/PedroViana42/Northwind-Data-Pipeline'
     },
     {
         id: '3',
         title: 'ABAC Rules Engine & Manager',
-        description: 'A granular permission system using attributes and dynamic conditions. Features a visual dashboard and a high-performance rule engine.',
+        description: 'Enterprise-grade security engine for granular Attribute-Based Access Control. Implements mission-critical authorization logic with high-performance rule evaluations for complex organizational hierarchies.',
         tags: ['Next.js', 'Fastify', 'Prisma', 'PostgreSQL'],
         category: 'DevOps',
-        metrics: [{ label: 'Logic', value: 'Attribute-Based' }, { label: 'Stack', value: 'Full-Stack' }],
+        metrics: [
+            { label: 'Security', value: 'Enterprise-Grade' },
+            { label: 'Logic', value: 'Attribute-Based' }
+        ],
         githubUrl: 'https://github.com/PedroViana42/abac-manager'
     },
     {
         id: '4',
-        title: 'Azure DevOps CI/CD & Self-Hosted Agent',
-        description: 'Automated build and deploy for Next.js on-premise servers via Azure DevOps, bypassing firewall restrictions without public IPs.',
+        title: 'Azure DevOps CI/CD Infrastructure',
+        description: 'Hardened CI/CD infrastructure for Next.js deployments. Implements self-hosted agents on-premise to bypass firewall restrictions while maintaining organizational security standards.',
         tags: ['Azure DevOps', 'CI/CD', 'Next.js', 'IIS'],
         category: 'DevOps',
-        metrics: [{ label: 'Deployment', value: 'Automated' }, { label: 'Security', value: 'On-Premise' }],
+        metrics: [
+            { label: 'Deployment', value: 'Automated' },
+            { label: 'Security', value: 'On-Premise' }
+        ],
         githubUrl: 'https://github.com/PedroViana42/azure-cicd-self-hosted'
     }
 ];

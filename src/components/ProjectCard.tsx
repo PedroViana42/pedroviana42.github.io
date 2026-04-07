@@ -55,11 +55,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 </div>
 
                 {project.metrics && (
-                    <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/5">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6 border-t border-white/5">
                         {project.metrics.map(m => (
                             <div key={m.label}>
-                                <div className="text-[10px] uppercase tracking-widest text-white/30">{m.label}</div>
-                                <div className="text-lg font-mono text-white">{m.value}</div>
+                                <div className="text-[10px] uppercase tracking-widest text-white/30 whitespace-nowrap">{m.label}</div>
+                                <div className="text-sm font-mono text-white truncate">{m.value}</div>
                             </div>
                         ))}
                     </div>

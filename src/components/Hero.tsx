@@ -3,10 +3,10 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Activity, Server } from 'lucide-react';
 
 const TAGLINES = [
-    "Architecting practical intelligence.",
-    "Building scalable AI infrastructure.",
-    "Engineering data-driven solutions.",
-    "Designing robust system architectures."
+    "Architecting resilient data systems.",
+    "Building scalable backend solutions.",
+    "Engineering high-performance pipelines.",
+    "Designing mission-critical architectures."
 ];
 
 const Hero = () => {
@@ -33,7 +33,7 @@ const Hero = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] uppercase tracking-widest mb-6">
                         <Activity size={12} className="animate-pulse" />
-                        System Status: Operational
+                        Building a Central Data Hub @ Unimed
                     </div>
 
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white mb-6 leading-[0.9]">
