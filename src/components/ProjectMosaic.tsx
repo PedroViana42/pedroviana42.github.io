@@ -10,28 +10,33 @@ const projects = [
     title: "SUBSOLO", 
     image: "/project_subsolo.png", 
     size: "tall",
-    description: "Rede universitária anônima com identidades temporárias. Foco em alta performance e privacidade estrutural."
+    description: "Rede universitária anônima com identidades temporárias. Foco em alta performance e privacidade estrutural.",
+    githubUrl: "https://github.com/PedroViana42/Subsolo",
+    liveUrl: "https://subsolo.usenexora.online/",
   },
   { 
     id: 2, 
     title: "NORTHWIND ETL", 
     image: "/project_northwind.png", 
     size: "wide",
-    description: "Pipeline de engenharia de dados end-to-end. Orquestração de PostgreSQL para Snowflake com foco em Data Quality."
+    description: "Pipeline de engenharia de dados end-to-end. Orquestração de PostgreSQL para Snowflake com foco em Data Quality.",
+    githubUrl: "https://github.com/PedroViana42/Northwind-Data-Pipeline",
   },
   { 
     id: 3, 
     title: "ABAC RULES ENGINE", 
     image: "/project_abac.png", 
     size: "normal",
-    description: "Motor de segurança enterprise para controle de acesso granular baseado em atributos."
+    description: "Motor de segurança enterprise para controle de acesso granular baseado em atributos.",
+    githubUrl: "https://github.com/PedroViana42/abac-manager",
   },
   { 
     id: 4, 
     title: "AZURE CI/CD INFRA", 
     image: "/project_azure.png", 
     size: "normal",
-    description: "Infraestrutura de CI/CD para Next.js utilizando agentes self-hosted on-premise."
+    description: "Infraestrutura de CI/CD para Next.js utilizando agentes self-hosted on-premise.",
+    githubUrl: "https://github.com/PedroViana42/azure-cicd-self-hosted",
   },
 ];
 
@@ -47,6 +52,7 @@ export default function ProjectMosaic() {
           {projects.map((project, index) => {
             const isTall = project.size === "tall";
             const isWide = project.size === "wide";
+            const projectUrl = project.liveUrl ?? project.githubUrl;
 
             return (
               <motion.div
@@ -76,13 +82,16 @@ export default function ProjectMosaic() {
                   <p className="text-white text-sm mb-6 max-w-xs transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                     {project.description}
                   </p>
-                  <motion.button
+                  <motion.a
+                    href={projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 bg-brand-yellow text-black px-6 py-2 rounded-full font-bebas text-xl tracking-wider"
                   >
                     VER PROJETO <ExternalLink size={18} />
-                  </motion.button>
+                  </motion.a>
                 </div>
 
                 {/* Corner Label */}
