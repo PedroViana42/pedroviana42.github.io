@@ -55,14 +55,18 @@ export default function ProjectMosaic() {
             const projectUrl = project.liveUrl ?? project.githubUrl;
 
             return (
-              <motion.div
+              <motion.a
                 key={project.id}
+                href={projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileTap={{ scale: 0.98 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`
-                  relative group overflow-hidden rounded-lg cursor-pointer
+                  relative group overflow-hidden rounded-lg cursor-pointer block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-4 focus-visible:ring-offset-brand-charcoal
                   ${isTall ? "md:row-span-2" : ""}
                   ${isWide ? "md:col-span-2" : ""}
                 `}
@@ -71,34 +75,29 @@ export default function ProjectMosaic() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                  className="object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-700 md:group-hover:scale-110"
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-brand-yellow font-bebas text-3xl mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-black/65 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-5 md:p-6 text-center">
+                  <h3 className="text-brand-yellow font-bebas text-3xl mb-4 transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-white text-sm mb-6 max-w-xs transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                  <p className="text-white text-sm mb-6 max-w-xs transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300 delay-75">
                     {project.description}
                   </p>
-                  <motion.a
-                    href={projectUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                  <span
                     className="flex items-center gap-2 bg-brand-yellow text-black px-6 py-2 rounded-full font-bebas text-xl tracking-wider"
                   >
                     VER PROJETO <ExternalLink size={18} />
-                  </motion.a>
+                  </span>
                 </div>
 
                 {/* Corner Label */}
                 <div className="absolute top-4 left-4 bg-brand-yellow text-black px-3 py-1 font-bebas text-sm tracking-widest z-10">
                   0{project.id}
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>

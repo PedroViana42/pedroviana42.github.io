@@ -16,6 +16,13 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: "Pedro Viana | Portfolio",
   description: "Desenvolvedor Full-Stack | Linha do Tempo de Conquistas",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
