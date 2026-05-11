@@ -8,7 +8,7 @@ const projects = [
   { 
     id: 1, 
     title: "SUBSOLO", 
-    image: "/project_subsolo.png", 
+    image: "/project_subsolo_v2.png", 
     size: "tall",
     description: "Rede universitária anônima com identidades temporárias. Foco em alta performance e privacidade estrutural.",
     githubUrl: "https://github.com/PedroViana42/Subsolo",
@@ -17,7 +17,7 @@ const projects = [
   { 
     id: 2, 
     title: "NORTHWIND ETL", 
-    image: "/project_northwind.png", 
+    image: "/project_northwind_v2.png", 
     size: "wide",
     description: "Pipeline de engenharia de dados end-to-end. Orquestração de PostgreSQL para Snowflake com foco em Data Quality.",
     githubUrl: "https://github.com/PedroViana42/Northwind-Data-Pipeline",
@@ -25,7 +25,7 @@ const projects = [
   { 
     id: 3, 
     title: "ABAC RULES ENGINE", 
-    image: "/project_abac.png", 
+    image: "/project_abac_v2.png", 
     size: "normal",
     description: "Motor de segurança enterprise para controle de acesso granular baseado em atributos.",
     githubUrl: "https://github.com/PedroViana42/abac-manager",
@@ -33,7 +33,7 @@ const projects = [
   { 
     id: 4, 
     title: "AZURE CI/CD INFRA", 
-    image: "/project_azure.png", 
+    image: "/project_azure_v2.png", 
     size: "normal",
     description: "Infraestrutura de CI/CD para Next.js utilizando agentes self-hosted on-premise.",
     githubUrl: "https://github.com/PedroViana42/azure-cicd-self-hosted",
